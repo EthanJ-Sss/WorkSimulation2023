@@ -15,3 +15,4 @@ Server/gameserver/cmd/relayserver/relayserver
 Client/Tools/Protocal/Game/ProtoMessage.cs
 Client/Tools/Protocal/Game/ProtoMessage.go
 Server/gameserver/cmd/relayserver/data/replay/
+Packages

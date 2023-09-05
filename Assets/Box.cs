@@ -10,6 +10,7 @@ public class Box : MonoBehaviour
    private void Start() 
    {
         originColor = GetComponent<SpriteRenderer>().color; 
+        //totalBox = 0; 
         FindObjectOfType<GameManager>().totalBox++;
    }
 

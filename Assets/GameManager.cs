@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadNextStage(){
         yield return new WaitForSeconds(2);
+        print(finishBox);
+        print(totalBox);
+        finishBox = 0;
+        totalBox = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
