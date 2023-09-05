@@ -1,14 +1,14 @@
-Client/Library/
-Client/Logs/
-Client/obj/
-Client/UserData/
-Client/UserSettings/
-Client/Temp/
-Client/.idea/
+Library/
+Logs/
+obj/
+UserData/
+UserSettings/
+Temp/
+.idea/
 *.csproj
 *.sln
-Client/SavedSprite/
-/Client/Assets/UI Toolkit
+SavedSprite/
+Assets/UI Toolkit
 *.log
 Server/.idea/
 Server/gameserver/cmd/relayserver/relayserver
