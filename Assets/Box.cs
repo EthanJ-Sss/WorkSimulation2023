@@ -32,6 +32,8 @@ public class Box : MonoBehaviour
         {
             FindObjectOfType<GameManager>().finishBox++;
             FindObjectOfType<GameManager>().CheckFinish();
+            FindObjectOfType<UIManager>().finishNum++;
+            FindObjectOfType<UIManager>().GetFinishCount();
             GetComponent<SpriteRenderer>().color = finishColor;
         }    
     }
