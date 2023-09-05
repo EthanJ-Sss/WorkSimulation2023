@@ -1,0 +1,17 @@
+Client/Library/
+Client/Logs/
+Client/obj/
+Client/UserData/
+Client/UserSettings/
+Client/Temp/
+Client/.idea/
+*.csproj
+*.sln
+Client/SavedSprite/
+/Client/Assets/UI Toolkit
+*.log
+Server/.idea/
+Server/gameserver/cmd/relayserver/relayserver
+Client/Tools/Protocal/Game/ProtoMessage.cs
+Client/Tools/Protocal/Game/ProtoMessage.go
+Server/gameserver/cmd/relayserver/data/replay/
