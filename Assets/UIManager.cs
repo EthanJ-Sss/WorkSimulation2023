@@ -7,9 +7,12 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI FinishCount;
     public int finishNum = 0;
+    public int totalNum = 0;
+
 
     public void GetFinishCount()
     {
-        FinishCount.text = "Count"+finishNum.ToString();
+        totalNum = FindObjectOfType<GameManager>().totalBox;
+        FinishCount.text = "Count:"+(totalNum-finishNum).ToString();
     }
 }
