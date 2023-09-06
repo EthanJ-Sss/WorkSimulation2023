@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerLevel05 : MonoBehaviour
 {
     Vector2 movedir;
     public LayerMask detectLayer;
@@ -56,20 +54,7 @@ public class PlayerController : MonoBehaviour
 
     void Move(Vector2 dir)
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        String sceneName = currentScene.name;
-        float multiplier = 0.5f;
-
-        
-        if (sceneName != "Level 05")
-        {
-            transform.Translate(dir);
-        }
-        else
-        {
-            transform.Translate(dir*multiplier);
-        }
-         
+         transform.Translate(dir);
     }
 
 

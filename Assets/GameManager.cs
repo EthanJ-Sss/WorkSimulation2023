@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public int totalBox;
     public int finishBox;
+    
 
     private void Update() {
         if(Input.GetKeyDown(KeyCode.R))
@@ -19,8 +20,17 @@ public class GameManager : MonoBehaviour
     {
         if(finishBox == totalBox)
         {
-            print("you win");
-            StartCoroutine(LoadNextStage());
+            if (FindObjectOfType<CountDownTime>().time>=0)
+            {
+                print("you win");
+                StartCoroutine(LoadNextStage());
+            }
+            else
+            {
+                ResetStage();
+            }
+            
+            
         }
 
         
@@ -28,10 +38,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadNextStage(){
         yield return new WaitForSeconds(2);
-        print(finishBox);
-        print(totalBox);
-        finishBox = 0;
-        totalBox = 0;
+        //print(finishBox);
+        //(totalBox);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

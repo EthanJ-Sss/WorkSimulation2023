@@ -13,6 +13,6 @@ public class UIManager : MonoBehaviour
     public void GetFinishCount()
     {
         totalNum = FindObjectOfType<GameManager>().totalBox;
-        FinishCount.text = "Count:"+(totalNum-finishNum).ToString();
+        FinishCount.text = "Count:"+finishNum.ToString();
     }
 }
