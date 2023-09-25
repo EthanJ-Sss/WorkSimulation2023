@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     {
         if(finishBox == totalBox)
         {
-            if (FindObjectOfType<CountDownTime>().time>=0 || SceneManager.GetActiveScene().name == "Level 01")
+            if (FindObjectOfType<CountDownTime>().time>=0)
             {
                 print("you win");
                 StartCoroutine(LoadNextStage());
@@ -38,9 +38,6 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadNextStage(){
         yield return new WaitForSeconds(2);
-        //print(finishBox);
-        //(totalBox);
-        print(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

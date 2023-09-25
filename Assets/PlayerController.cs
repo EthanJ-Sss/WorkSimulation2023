@@ -59,16 +59,9 @@ public class PlayerController : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         String sceneName = currentScene.name;
         float multiplier = 0.5f;
-
+        transform.Translate(dir);
         
-        if (sceneName != "Level 05")
-        {
-            transform.Translate(dir);
-        }
-        else
-        {
-            transform.Translate(dir*multiplier);
-        }
+        
          
     }
 
