@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             if(hit.collider.GetComponent<Box>()!=null)
             {
-                return  hit.collider.GetComponent<Box>().CanMoveToDir(dir);
+                return  hit.collider.GetComponent<Box>().CanMoveToDir(dir, detectLayer);
             }
             return false;
         }

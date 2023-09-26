@@ -232,6 +232,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sokoban_spritesheet_colleague
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 106
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1d15c7e7f6d204cbfa61096c7db3a6
+      internalID: -1266774244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -248,6 +269,7 @@ TextureImporter:
       sokoban_spritesheet_2: -1100401167
       sokoban_spritesheet_0: 2034486172
       sokoban_spritesheet_5: -1382549745
+      sokoban_spritesheet_colleague: -1266774244
       sokoban_spritesheet_4: -923190643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -15,6 +15,18 @@ public class Box : MonoBehaviour
         FindObjectOfType<UIManager>().FinishCount.text = "COUNT:" + FindObjectOfType<GameManager>().finishBox.ToString();
    }
 
+    public bool CanMoveToDir(Vector2 dir, LayerMask detectLayer)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3)dir * 0.5f , dir ,  0.3f, detectLayer);
+        if(!hit)
+        {
+            transform.Translate(dir);
+            return true;
+        }
+        return false;
+    
+    }
+
     public bool CanMoveToDir(Vector2 dir)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (Vector3)dir * 0.5f , dir ,  0.3f);
@@ -26,6 +38,7 @@ public class Box : MonoBehaviour
         return false;
     
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision) 
     {
