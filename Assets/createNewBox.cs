@@ -26,12 +26,18 @@ public class createNewBox : MonoBehaviour
 
     IEnumerator SpawnBoxes()
     {
+        int boxLayer = LayerMask.NameToLayer("Box");
         for (int i = 0; i < boxCount; i++)
         {
             currentBox = Instantiate(boxPrefab, spawnPoint.transform.position, Quaternion.identity);
-
-            yield return new WaitUntil(() => currentBox.transform.position != spawnPoint.transform.position);
+            currentBox.layer = boxLayer;
+            yield return new WaitForSeconds(1);
+            yield return new WaitUntil(() => Vector3.Distance(currentBox.transform.position, spawnPoint.transform.position) > 1f );
         }
+    }
+
+    bool hasFinished(){
+        return currentBox.transform.position != spawnPoint.transform.position;
     }
 }
 
