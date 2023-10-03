@@ -49,7 +49,7 @@ public class Box : MonoBehaviour
             FindObjectOfType<UIManager>().finishNum++;
             FindObjectOfType<UIManager>().GetFinishCount();
             GetComponent<SpriteRenderer>().color = finishColor;
-            Destroy(gameObject,2f);
+            Destroy(gameObject,0.5f);
         }    
     }
     private void OnTriggerExit2D(Collider2D collision) 
