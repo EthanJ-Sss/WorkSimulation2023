@@ -9,26 +9,69 @@ public class MusicPlayer : MonoBehaviour
     public AudioClip Clip2;
     public AudioClip Clip3;
     public AudioSource audioSource;
-    
-    void Awake() {
-        
+
+    private bool clip1Played = false;
+    private bool clip2Played = false;
+    private bool clip3Played = false;
+    private bool clip4Played = false;
+
+    void Awake()
+    {
+
         DontDestroyOnLoad(gameObject);
     }
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
     }
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Level 04")
+        var currentScene = SceneManager.GetActiveScene().name;
+        switch (currentScene)
         {
-            audioSource.clip = Clip1;
-            audioSource.Play();
-        }
-        if(SceneManager.GetActiveScene().name == "Level 08")
-        {
-            audioSource.clip = Clip1;
-            audioSource.Play();
+            case "Level 04":
+                {
+                    if (!clip1Played)
+                    {
+                        clip1Played = true;
+                        audioSource.clip = Clip1;
+                        audioSource.Play();
+                    }
+                    break;
+                }
+            case "Level 08":
+                {
+                    if (!clip2Played)
+                    {
+                        clip2Played = true;
+                        audioSource.clip = Clip2;
+                        audioSource.Play();
+                    }
+                    break;
+                }
+            case "Level 12":
+                {
+                    if (!clip3Played)
+                    {
+                        clip3Played = true;
+                        audioSource.clip = Clip3;
+                        audioSource.Play();
+                    }
+                    break;
+                }
+            case "Level 16":
+                {
+                    if (!clip4Played)
+                    {
+                        clip4Played = true;
+                        audioSource.clip = Clip1;
+                        audioSource.Play();
+                    }
+                    break;
+                }
+            default:
+                break;
         }
 
     }
