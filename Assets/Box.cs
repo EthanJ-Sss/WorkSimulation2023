@@ -12,7 +12,7 @@ public class Box : MonoBehaviour
         originColor = GetComponent<SpriteRenderer>().color; 
         //totalBox = 0; 
         FindObjectOfType<GameManager>().totalBox++;
-        FindObjectOfType<UIManager>().FinishCount.text = "COUNT:" + FindObjectOfType<GameManager>().finishBox.ToString();
+        FindObjectOfType<UIManager>().FinishCount.text = "Finished Work:" + FindObjectOfType<GameManager>().finishBox.ToString();
    }
 
     public bool CanMoveToDir(Vector2 dir, LayerMask detectLayer)
